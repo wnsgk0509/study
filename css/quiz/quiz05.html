@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+            box-sizing: border-box;
+        }
+        .box{
+            width: 250px;
+            height: 100px;
+        }
+        .container{
+            width: 500px;
+            
+            margin: 0 auto;
+            margin-top: 50px;
+            /* border: 1px solid black; */
+        }
+
+        .red-box{
+            background-color: red;
+            float: left;
+        }
+        .green-box{
+            background-color: green;
+            float: left;
+        }
+        .blue-box{
+            width: 500px;
+            height: 200px;
+            
+            background-color: blue;
+            float: left;
+        }
+
+        .content-box{
+            text-align: center;
+            width: 100%;
+            float: left;
+        }
+
+        /* float 사용시 clear필수 사용 */
+        .container::after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box green-box"></div>
+
+        <div class="content-box">글자가운데정렬</div>
+
+        <div class="box blue-box"></div>
+
+    </div>
+</body>
+</html>
