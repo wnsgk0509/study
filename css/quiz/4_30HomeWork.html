@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 300px;
+            border: 1px solid black;
+            box-sizing: border-box;
+
+            padding: 20px;
+            padding-top: 10px;
+
+        }
+
+        .section1{
+            display: flex;
+            justify-content: right;
+            height: 20px;
+        }
+
+        .close_bt{
+            width: 5px;
+            height: 5px;
+
+            cursor: pointer;
+        }
+        .menu{
+            display: flex;
+            justify-content: left;
+            height: 30px;
+
+            padding-top: 30px;
+
+
+            border-bottom: 1px solid gray;
+            color: gray;
+        }
+        .tab{
+            width: 70px;
+            cursor: pointer;
+        }
+        .tab_active{
+            width: 70px;
+       
+            color:blue;
+
+            border-bottom: 2px solid blue;
+        }
+        .user_input{
+           
+            justify-content: left;
+            margin-top: 30px;
+            width: 235px;
+        }
+        .label{
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .field{
+            width: 100%;
+            border: 1px solid gray;
+           
+            padding: 10px;
+        }
+        .box{
+            background-color: blue;
+            color: aliceblue;
+
+            width: 255px;
+            height: 50px;
+            display: flex;
+
+            border-radius: 3px;
+
+            justify-content: center;
+            align-items: center;
+        }
+        .terms-box {
+            display: flex;
+            align-items: center; 
+            font-size: 10px;
+            margin-top: 12px;
+            margin-bottom: 15px;
+
+        }
+
+        .sign{
+            display: flex;
+            justify-content: center;
+
+            margin-top: 20px;
+            margin-bottom: -5px;
+        }
+        .sign2{
+            color: blue;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section1">
+            <div class="close_bt">x</div>
+        </div>
+        <div style="font-size: 20px;">지금 가입하시면 <br><strong> 웰컴쿠폰을 드려요!</strong></div>
+
+        <div class="menu">
+            <div class="tab">로그인</div>
+            <div class="tab_active">회원가입</div>
+        </div>
+
+        <div class="user_input">
+            <div class="label">이메일</div>
+            <input type="email" class="field" placeholder="이메일을 입력해주세요.">
+
+            <div class="label">이름 / 업체명</div>
+            <input type="text" class="field" placeholder="2자 이상 20자 이하">
+
+            <div class="label">비밀번호</div>
+            <input type="password" class="field" placeholder="영문 숫자 특수문자 조합 6-16자리">
+
+            <div class="label">비밀번호 확인</div>
+            <input type="password" class="field" placeholder="비밀번호를 다시 입력해주세요.">
+
+            <label class="terms-box">
+                <input type="checkbox" >
+                <span><ins>개인정보수집이용안내</ins> 및 <ins>약관</ins>에 동의 합니다.</span>
+            </label>
+
+        <div class="box" >
+            <div class="box-content">
+                회원 가입하기
+            </div>
+        </div>
+
+        <div class="sign">
+            <div class="sign2">
+                <ins>SNS로 간편하게 가입하기</ins>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
