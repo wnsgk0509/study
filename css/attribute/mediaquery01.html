@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: antiquewhite;
+        }
+
+        h2{
+            color: red;
+        }
+
+        p{
+            font-weight: bold;
+        }
+
+        @media screen and (max-width:768px) {
+            
+            .box{
+                background-color: aquamarine;
+                width: 330px;
+            }
+
+            h2{
+                color: blue;
+            }
+            
+            p{font-weight: normal;}
+        }
+
+        @media screen and (max-width:680px) {
+            .box{
+                background-color: darkkhaki;
+
+            }
+
+            p{
+                font-size: 10px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <h2>t2 tag</h2>
+        <p>p tag</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Minima vitae placeat adipisci, et itaque saepe eveniet! 
+             Voluptatibus quis facere cupiditate adipisci, eum mollitia veritatis rem quod ut dolor
+              vero? Qui?</p>
+    </div>
+</body>
+</html>
