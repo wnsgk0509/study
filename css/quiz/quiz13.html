@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+        }
+        .section1, .section2, .section3, .section4{
+            width: 800px;
+            height: 100px;
+            
+            display: flex;
+            justify-content: left;
+        }
+        .section1 .box{
+            width: 50%;
+        }
+        .section2 .box{
+            width: 100%;
+        }
+        .section3{
+            height: 200px;
+        }
+        .section3 .box{
+            width: 34%;
+        }
+        .section3 .section3-2{
+            width: 66%;
+        }
+        .section3 .section3-2 .box2{
+            width: 100%;
+            height: 50%;
+        }
+        .section4 .box{
+            width: 25%;
+        }
+
+        .box, .box2{  border: 1px solid black;}
+        
+        .yellow-box{background-color: yellow;}
+        .gray-box{background-color: gray;}
+        .purple-box{background-color: purple;}
+        .skyblue-box{background-color: skyblue;}
+        .orange-box{background-color: orange;}
+        .green-box{background-color: green;}
+        .pink-box{background-color: pink;}
+
+        @media screen and (max-width:700px) {
+            .container, .section1, .section2, .section3, .section4{
+                width: 100%;
+                
+            }
+
+        }
+        @media screen and (max-width:650px) {
+            .section4 {
+                flex-wrap: wrap; 
+                height: 200px; 
+            }
+            .section4 .box {
+                width: 50%;
+                height: 100px; 
+            }
+        }
+
+
+        
+        @media screen and (max-width:500px) {
+            .section1, .section3{
+                flex-wrap: wrap;
+                height: 200px;
+            }
+            .section1 .box{
+                width: 100%;
+                height: 50%;
+            }
+            .section3 .box{
+                width: 100%;
+                height: 50%;
+            }
+            .section3 .section3-2{
+                display: flex;
+                width: 100%;
+                height: 100%;   
+            }
+
+            
+        }
+        @media screen and (max-width:350px) {
+            .section1, .section2, .section3, .section4, .section3 .section3-2 {
+                flex-direction: column;
+                height: auto; 
+            }
+
+            .section1 .box, 
+            .section2 .box, 
+            .section3 .box, 
+            .section4 .box, 
+            .section3 .section3-2 .box2 {
+                width: 100%; 
+                height: 100px; 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section1">
+            <div class="box yellow-box" ></div>
+            <div class="box gray-box" ></div>
+        </div>
+
+        <div class="section2">
+            <div class="box purple-box"></div>
+        </div>
+
+
+        <div class="section3" >
+            <div class="box skyblue-box" ></div>
+            <div class="section3-2" >
+                <div class="box2 yellow-box" ></div>
+                <div class="box2 orange-box" ></div>
+            </div>
+
+        </div>
+
+        <div class="section4">
+            <div class="box yellow-box"></div>
+            <div class="box orange-box"></div>
+            <div class="box yellow-box"></div>
+            <div class="box green-box" ></div>
+        </div>
+    </div>
+</body>
+</html>
