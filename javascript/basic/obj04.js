@@ -25,6 +25,7 @@ console.log(str); //원본 변형?
 
 console.log(str.indexOf("0"));
 console.log(str.substring(0,str.indexOf("@")));
+console.log(":%@$##$s")
 console.log(str.substring(str.indexOf("@")+1));
 
 
