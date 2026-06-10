@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <input type="text" id="loginId" placeholder="아이디"><br>
+        <input type="password" id="loginPw" placeholder="비밀번호"><br>
+        <button id="btnLogin" onclick="tryLogin()">로그인 시도</button><br>
+    </form>
+    
+    <script>
+
+        const loginId = document.getElementById('loginId');
+        const loginPw = document.getElementById('loginPw');
+        const btnLogin = document.getElementById('btnLogin');
+
+
+        function tryLogin(){
+            if(loginId.value == "" && loginPw.value == ""){
+                alert('둘 다 입력하세요');
+                loginId.focus();
+                
+            } 
+            else if(loginId.value == "" && loginPw.value != ""){
+                alert('아이디칸 입력하세요');
+                loginId.focus();
+            }
+            else if(loginId.value != "" && loginPw.value == ""){
+                alert('비밀번호칸 입력하세요');
+                loginPw.focus();
+            }
+            else{
+                loginId.value = "";
+                loginPw.value = "";
+            }
+            
+        }
+
+        loginId.addEventListener('keydown',(event)=>{
+           
+            console.log(event);
+            console.log(loginId.value);
+
+            if(event.key == 'Enter'){
+                 event.preventDefault();
+                loginPw.focus();
+            }
+        })
+
+        loginPw.addEventListener('keydown',(event)=>{
+
+            if(event.key == 'Enter'){
+                event.preventDefault();
+                tryLogin();
+            }
+        })
+
+    </script>
+</body>
+</html>
